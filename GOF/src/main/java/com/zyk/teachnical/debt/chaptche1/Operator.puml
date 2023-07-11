@@ -1,0 +1,30 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class OperatorFactory{
+    + static  Operator getOperator(char operator)
+}
+
+abstract class Operator{
+    -int operatorNumberA
+    -int operatorNumberB
+    +int getOperatorNumberA()
+    +int getOperatorNumberB()
+    +void setOperatorNumberB()
+    +void setOperatorNumberB()
+    +abstract int getResult()
+}
+
+class SubOperator{
+
+}
+
+
+class AddOperator{
+
+}
+
+Operator --> OperatorFactory
+Operator <|-- AddOperator
+Operator <|-- SubOperator
+@enduml
